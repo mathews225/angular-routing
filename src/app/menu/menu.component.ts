@@ -10,7 +10,8 @@ export class MenuComponent implements OnInit {
   menus: any[] =[
     {display: 'Home', route: '/home' },
     {display: 'About', route: '/about' },
-    {display: 'Help', route: '/help' }
+    {display: 'Help', route: '/help' },
+    {display: 'Users', route: '/user/list' }
   ]
 
   constructor() { }
