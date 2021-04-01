@@ -8,7 +8,7 @@ import { User } from './user.class';
 })
 export class UserService {
 
-  baseurl: string = "http://localhost:39623/api/Users/"
+  baseurl: string = "http://localhost:39623/api/Users"
 
   constructor(
     private http: HttpClient
@@ -19,7 +19,7 @@ export class UserService {
   }
 
   get(id: number): Observable<User> {
-    return this.http.get(`${this.baseurl}${id}`) as Observable<User>;
+    return this.http.get(`${this.baseurl}/${id}`) as Observable<User>;
   } /// removed [/] 
 
   create(user: User): Observable<User> {

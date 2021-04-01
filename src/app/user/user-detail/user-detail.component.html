@@ -47,6 +47,18 @@
                     </tr>
                 </thead>
             </table>
+            <div class="flex">
+
+                <span *ngIf="!showVerify">
+                    <button (click)="toggleVerify()" class="btn btn-danger">Delete</button>
+                </span>
+                <span>
+                    <button (click)="edit()" class="btn btn-warning float-right">Edit</button>
+                </span>
+                <span *ngIf="showVerify">
+                    <button (click)="delete()" class="btn btn-danger float-right">Verify</button>
+                </span>
+            </div>
         </div>
     </div>
 </main>

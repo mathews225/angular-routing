@@ -12,4 +12,12 @@ main {
 
 span.search {
     float: right;
-} 
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
