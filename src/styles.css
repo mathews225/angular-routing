@@ -21,3 +21,7 @@ span.search {
 .float-right {
     float: right;
 }
+
+input {
+    border-radius: 8px;
+}
