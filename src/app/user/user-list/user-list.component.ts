@@ -31,5 +31,18 @@ users: User[] = [];
       )
   }
 
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params.id;
+    this.usersvc.get(+this.id).subscribe(
+      res => {
+        console.log("User:", res);
+        this.user = res;
+      },
+      err => {
+        console.error(err);
+      }
+    )
+  }
+
 }
  
