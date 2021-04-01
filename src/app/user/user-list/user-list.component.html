@@ -1,6 +1,11 @@
 <main>
     <div class="container">
         <h3>User List</h3>
+        <span><a routerLink="/users/create"> Create </a></span>
+        <span class="search"><input type="text" placeholder="Search"></span>
+        <!--- <span class="search"><input [(ngModel)]="seachCriteria" type="text" placeholder="Search"></span> --->
+
+
         <table class="table table-sm">
             <thead>
                 <tr>
@@ -15,12 +20,13 @@
             </thead>
             <tbody>
                 <tr *ngFor="let user of users">
+                <!--- <tr *ngFor="let user of users| searchUser:'pete'"> --->
                     <td>{{user.id}}</td>
                     <td>{{user.username}}</td>
                     <td>{{user.firstname}} {{user.lastname}}</td>
                     <td>{{user.email}}</td>
-                    <td>{{user.isReviewer}}</td>
-                    <td>{{user.isAdmin}}</td>
+                    <td>{{user.isReviewer | bool:"fr"}}</td>
+                    <td>{{user.isAdmin | bool}}</td>
                     <td>
                         <a routerLink="/users/edit/{{user.id}}">Edit</a>
                         <span> | </span>

@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { HelpComponent } from './help/help.component';
 import { MenuComponent } from './menu/menu.component';
 import { UserListComponent } from './user/user-list/user-list.component';
+import { BoolDisplayPipe } from './bool-display.pipe';
+import { SearchUserPipe } from './search-user.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { UserListComponent } from './user/user-list/user-list.component';
     AboutComponent,
     HelpComponent,
     MenuComponent,
-    UserListComponent
+    UserListComponent,
+    BoolDisplayPipe,
+    SearchUserPipe
   ],
   imports: [
     BrowserModule,
