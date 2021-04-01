@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { User } from "./user/user.class";
+
 import { UserService } from './user/user.service';
 import { FormsModule } from "@angular/forms";
 
@@ -8,6 +9,8 @@ import { FormsModule } from "@angular/forms";
   name: 'searchUser'
 })
 export class SearchUserPipe implements PipeTransform {
+
+
 
   transform(users: User[], searchCriteria: string): User[] {
     let selectedUsers: User[] = [];
