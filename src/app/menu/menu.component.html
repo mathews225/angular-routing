@@ -4,11 +4,27 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item" *ngFor="let menu of menus">
-                <a class="nav-link" routerLink="{{menu.route}}">{{menu.display}}<span class="sr-only"></span></a>
-            </li>
-        </ul>
+        <span>
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" *ngFor="let menu of menus">
+                    <a class="nav-link" routerLink="{{menu.route}}">{{menu.display}}<span class="sr-only"></span></a>
+                </li>
+            </ul>
+        </span>
+        <span>
+
+<!---
+            <form class="form-inline my-2 my-lg-0">
+                <span>Username</span>
+            <span><input [(ngModel)]="user.username" type="text"></span>
+            <span>Password</span>
+            <span><input [(ngModel)]="user.password" type="password"></span>
+                <button class="btn btn-outline-success my-2 my-sm-0" (click)="login">Search</button>
+            </form>
+-->         
+   
+        </span>
     </div>
 </nav>
 

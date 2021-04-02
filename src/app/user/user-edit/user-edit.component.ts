@@ -11,6 +11,7 @@ import { UserService } from '../user.service';
 export class UserEditComponent implements OnInit {
 
   user: User = null;
+  id: number = 0;
 
   constructor(
     private usersvc: UserService,
@@ -20,16 +21,28 @@ export class UserEditComponent implements OnInit {
 
 
 
-  ngOnInit(): void {
+  update(): void {
     console.log("Before Change", this.user);
     this.usersvc.update(this.user).subscribe(
-      res => { 
-        this.router.navigateByUrl("/users/list");
+      res => {
+        console.warn(`Successfully edited ${this.user.username}`); 
+        this.router.navigateByUrl('/user/list');
       },
       err => {
         console.error(err);
       }
     )  
   }
-
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params.id;
+    this.usersvc.get(+this.id).subscribe(
+      res => {
+        console.log("User:", res);
+        this.user = res;
+      },
+      err => {
+        console.error(err);
+      }
+    )
+  }
 }

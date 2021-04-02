@@ -25,7 +25,7 @@ export class UserDetailComponent implements OnInit {
   }
 
   edit(): void{
-    this.router.navigateByUrl('/users/edit/${this.id}')
+    this.router.navigateByUrl('/user/edit/${this.id}')
   }
 
   delete(): void {
